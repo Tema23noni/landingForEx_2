@@ -1,0 +1,10 @@
+.btn{
+    background: rgb(73, 133, 255);
+    padding: 15px 36px;
+    @apply text-white rounded-2xl font-bold;
+    transition: 0.5s;
+}
+.btn:hover{
+    transition: 0.2s;
+    box-shadow: 0px 3px 10px rgba(73, 133, 255, 1);
+}

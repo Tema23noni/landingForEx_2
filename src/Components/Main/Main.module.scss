@@ -1,0 +1,32 @@
+.Main{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../img/Rectangle.png')  no-repeat;
+    background-size: cover;
+    @apply w-full h-screen overflow-hidden;
+    .studioIT{
+        @apply  h-full overflow-hidden;
+        .Main__content{
+            @apply flex justify-center flex-col items-center h-full text-center overflow-hidden;
+            span{
+                @apply text-white font-medium my-5;
+            }
+            h1{
+                @apply text-5xl font-extrabold m-2 px-20 text-white leading-tight;
+                margin-bottom: 50px;
+            }
+
+        }
+    }
+}
+@media screen and (max-width: 700px) and (min-width: 375px) {
+    .Main{
+        
+        .studioIT{
+            @apply w-full;
+            .Main__content{
+                h1{
+                    @apply text-3xl px-0;
+                }
+            }
+        }
+    }
+}

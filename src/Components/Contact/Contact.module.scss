@@ -1,0 +1,43 @@
+.Contact{
+    margin-top: 50px;
+    @apply w-full;
+    background: #F6F6F8;
+    .Contact__content{
+        @apply h-full w-full;
+        .Contact__form{
+            @apply flex justify-between p-10;
+            h3{
+                @apply text-lg font-semibold;
+            }
+            p{
+                color: #999999;
+                @apply my-7 cursor-pointer hover:underline;
+            }
+        }
+        .line{
+            border: 1px solid #E0E0E0;
+            margin: 30px 0;
+        }
+        .Contact__text{
+            text-align: center;
+            padding: 0 0 20px 0;
+            color: #999999;
+        }
+    }
+}
+@media screen and (max-width: 767px) and (min-width: 375px){
+    .Contact{
+        .Contact__content{
+            .Contact__form{
+                @apply flex justify-center w-full items-center;
+                .Contactss{
+                    display: block;
+                }
+                .Contacts{
+                    
+                    display: none;
+                }
+            }
+        }
+    }
+}

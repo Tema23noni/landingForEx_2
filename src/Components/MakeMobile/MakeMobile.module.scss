@@ -1,0 +1,85 @@
+.MakeMobile{
+    @apply my-24;
+    .MakeMobile__content{
+        
+        .MakeMobile__text{
+
+            margin-bottom: 20px;
+            @apply  mx-10;
+            h2{
+                color: #323232;
+                @apply text-4xl font-bold text-center;
+            }
+            p{
+                word-wrap: inherit;
+                line-height: 25px;
+                @apply m-5 text-gray-400 text-center;
+            }
+        }
+        .MakeSites{
+            @apply flex w-full h-full justify-evenly my-10 ;
+            .MakeSite{
+                @apply flex h-28 items-center justify-center;
+                .image{
+                    border: 1px solid #E0E0E0;
+                    padding: 10px;
+                    width: 110px;
+                    @apply flex justify-center items-center  rounded-full;
+                    img{
+                        border: 1px solid #4985FF;
+                        background: url('../../img/project.png') 50% 50% no-repeat;
+                        padding: 35px;
+                        width: 40px;
+                        height: 40px;
+                        @apply flex justify-center items-center rounded-full;
+                    }
+                }
+                .text{
+                    @apply mx-5;
+                    h3{
+                        @apply font-semibold;
+                    }
+                    p{
+                        color: #999999;
+                        line-height: 22px;
+                        @apply text-sm
+                    }
+                }
+            }
+        }
+        .allProduct{
+            @apply w-full flex justify-center;
+            button{
+                border: none;
+                margin-top: 32px;
+                background: rgb(73, 133, 255);
+                @apply px-10 py-4 text-white rounded-2xl font-bold;
+                transition: 0.5s;
+            }
+            button:hover{
+                transition: 0.2s;
+                box-shadow: 0px 3px 10px rgba(73, 133, 255, 1);
+            }
+        }
+        
+    }
+}
+@media screen and (max-width:890px) and (min-width:375px) {
+    .MakeMobile{
+        .MakeSites{
+            @apply flex-col
+        }
+    }
+}
+@media screen and (max-width: 567px) and (min-width: 375px) {
+    .MakeMobile{
+        .MakeMobile__content{
+            .MakeMobile__text{
+                @apply mx-0;
+                h2{
+                    @apply text-2xl
+                }
+            }
+        }
+    }
+}

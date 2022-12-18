@@ -1,0 +1,33 @@
+.Header{
+    @apply w-full h-24 absolute top-0 left-0;
+
+    border-bottom: 1px solid #A1A1A1;
+    .navigate{
+        @apply w-full h-full flex justify-end;
+        div{
+            @apply  w-3/5 h-full;
+            .links{
+            @apply flex w-full h-full justify-between items-center;
+            li{
+                @apply flex w-full cursor-pointer h-full justify-center items-center;
+                p{
+                  @apply text-white ;
+                  
+                }
+                 
+            }
+            li:hover{
+                    border-bottom: 2px solid #fff;
+            }
+        }
+        }
+        
+    }
+}
+@media screen and (max-width: 767px) and (min-width: 375px){
+    .Header{
+        .navigate{
+            display: none;
+        }
+    }
+}
