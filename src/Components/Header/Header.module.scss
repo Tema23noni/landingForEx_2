@@ -23,11 +23,101 @@
         }
         
     }
+    .navigateMob{
+        display: none;
+    }
 }
 @media screen and (max-width: 767px) and (min-width: 375px){
     .Header{
+        border: none;
         .navigate{
             display: none;
+        }
+        .navigateMob{
+            @apply block w-full h-full;
+            .MenuB.active{
+                transition: 0.2s;
+                transform: translateX(0);
+            }
+            .MenuB{
+                transition: 0.2s;
+                transform: translateX(100%);
+                z-index: 999;
+                
+                @apply fixed top-0 right-0   w-full h-full;
+                .MenuB__cont{
+                    background: #ffffff;
+                    @apply flex fixed top-0 right-0 justify-center items-center w-3/5 h-full;
+                    .navigate{
+                        @apply flex  justify-center w-full h-full;
+                        .links{
+                            @apply flex justify-evenly flex-col;
+                            li{
+                                transition: 0.2;
+                                padding: 0;
+                                @apply font-semibold cursor-pointer text-2xl;
+                            }
+                            li:hover{
+                                transition: 0.2s;
+                                transform: scaleY(1.2);
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .MenuB__open{
+                z-index: 1000;
+                border-radius: 50%;
+                background-color: rgba(73, 133, 255, 1);
+                transition: .2s;
+                padding: 15px;
+                @apply cursor-pointer fixed top-5 right-5 flex items-center justify-center;
+                .Open__Modal{
+                    @apply relative w-7 h-6 flex justify-center items-center;
+                    span{
+                        transition: all ease-in-out .3s;
+                        height: 3px;
+                        @apply w-7 bg-white ;
+                    }
+                    ::after{
+                        content: '';
+                        transition: all ease-in-out .3s;
+                        height: 3px;
+                        @apply bottom-0 right-0 w-7 absolute bg-white;
+                    }
+                    ::before{
+                        content: '';
+                        transition: all ease-in-out .25s;
+                        height: 3px;
+                        @apply top-0 right-0 w-7 absolute bg-white;
+                    }
+                }
+                .Open__Modal.active{
+                    @apply relative w-7 h-6 flex justify-center items-center;
+                    
+                    span{
+                        transition: .3s;
+                        height: 3px;
+                        @apply w-7 rotate-45 bg-white ;
+                    }
+                    ::before{
+                        content: '';
+                        transition: .1s;
+                        height: 3px;
+                        @apply bottom-0 -rotate-90 right-0 w-7 absolute bg-white;
+                    }
+                    ::after{
+                        content: '';
+                        transition: .3s;
+                        display: none;
+                    }
+                }
+            }
+            .MenuB__open:hover{
+                transition: 0.2s;
+                box-shadow: 0px 1px 15px rgba(73, 133, 255, 1);
+            }
         }
     }
 }

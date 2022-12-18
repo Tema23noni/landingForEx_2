@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import cl from './Header.module.scss';
+import MenuB from './MenuB/MenuB';
+import MenuB__open from './MenuB/MenuB__open';
 const Header = () => {
+  const [openModal, setOpenModal] = useState(false);
   return (
     <div className={cl.Header}>
         
@@ -15,7 +18,11 @@ const Header = () => {
                             <li><p>Контакты</p></li>
                         </ul>
                     </div>
-                </nav>
+            </nav>
+            <div className={cl.navigateMob}>
+              <MenuB__open openModal={openModal} setOpenModal={setOpenModal}/>
+              <MenuB openModal={openModal} setOpenModal={setOpenModal}/>
+            </div>
         </div>
         
     </div>
